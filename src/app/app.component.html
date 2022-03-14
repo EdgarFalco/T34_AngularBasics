@@ -1,0 +1,66 @@
+<div class="box">
+  <div class="calculadora">
+    <form name="calculadora" id="calculadora">
+      <p>
+        <input
+          class="mt-4"
+          type="Text"
+          name="visor"
+          id="textoPantalla"
+          value="{{ textoVisor }}"
+        />
+      </p>
+      <p>
+        <input
+          class="superior"
+          type="button"
+          name="Retr"
+          value="Retr"
+          (click)="retr()"
+        />
+        <input
+          class="superior"
+          type="button"
+          name="Ce"
+          value="CE"
+          (click)="borrar()"
+        />
+        <input
+          class="superior"
+          type="button"
+          name="C"
+          value="C"
+          (click)="borrar()"
+        />
+      </p>
+      <p>
+        <input type="button" name="7" value="7" (click)="anadirNumero(7)" />
+        <input type="button" name="8" value="8" (click)="anadirNumero(8)" />
+        <input type="button" name="9" value="9" (click)="anadirNumero(9)" />
+        <input type="button" name="/" value="/" (click)="hacerOperacion('/')" />
+        <input type="button" name="Raíz" value="Raíz" (click)="raiz()" />
+      </p>
+      <p>
+        <input type="button" name="4" value="4" (click)="anadirNumero(4)" />
+        <input type="button" name="5" value="5" (click)="anadirNumero(5)" />
+        <input type="button" name="6" value="6" (click)="anadirNumero(6)" />
+        <input type="button" name="*" value="*" (click)="hacerOperacion('*')" />
+        <input type="button" name="%" value="%" (click)="porcentaje()" />
+      </p>
+      <p>
+        <input type="button" name="1" value="1" (click)="anadirNumero(1)" />
+        <input type="button" name="2" value="2" (click)="anadirNumero(2)" />
+        <input type="button" name="3" value="3" (click)="anadirNumero(3)" />
+        <input type="button" name="-" value="-" (click)="hacerOperacion('-')" />
+        <input type="button" name="1/x" value="1/x" (click)="inversa()" />
+      </p>
+      <p>
+        <input type="button" name="0" value="0" (click)="anadirNumero(0)" />
+        <input id="vacio" type="button" value=" " />
+        <input type="button" name="+/-" value="+/-" (click)="masmenos()" />
+        <input type="button" name="+" value="+" (click)="hacerOperacion('+')" />
+        <input type="button" name="=" value="=" (click)="igual()" />
+      </p>
+    </form>
+  </div>
+</div>
